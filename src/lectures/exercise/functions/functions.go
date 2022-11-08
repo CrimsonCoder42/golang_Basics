@@ -19,6 +19,31 @@ package main
 
 import "fmt"
 
+func nameGreet(name string) {
+	fmt.Println("Hello", name, "welcome to golang")
+}
+
+func tester() string {
+	return "This is a test of the Devin broadcast system."
+}
+
+func addThree(a, b, c int) int {
+	return a + b + c
+}
+
+func anyNum() int {
+	return 13
+}
+
+func anyTwoNum() (int, int) {
+	return 3, 7
+}
+
 func main() {
+
+	nameGreet("Devin")
+	fmt.Println(tester())
+	var numOne, numTwo = anyTwoNum()
+	fmt.Println(addThree(anyNum(), numOne, numTwo))
 
 }

@@ -15,4 +15,17 @@ package main
 import "fmt"
 
 func main() {
+	sum := 0
+	for i := 1; i < 51; i++ {
+		sum++
+		if sum%3 == 0 && sum%5 == 0 {
+			fmt.Println("FizzBuzz")
+		} else if sum%5 == 0 {
+			fmt.Println("Buzz")
+		} else if sum%3 == 0 {
+			fmt.Println("Fizz")
+		} else {
+			fmt.Println(i)
+		}
+	}
 }
