@@ -17,8 +17,31 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+type Triangle struct {
+	Base  int
+	Side1 int
+	Side2 int
+}
+
+func triArea(a, c, b int) float64 {
+	totals := (a + b + c) * (-a + b + c) * (a - b + c) * (a + b - c)
+	area := 0.25 * math.Sqrt(float64(totals))
+	return area
+}
+
+func triPerim(s1, s2, base float32) float32 {
+	perimeter := s1 + s2 + base
+	return perimeter
+}
 
 func main() {
+	triangle1 := Triangle{3, 3, 3}
+	triangle1Result := triArea(triangle1.Base, triangle1.Side1, triangle1.Side2)
 
+	fmt.Println(math.Round(triangle1Result))
 }
